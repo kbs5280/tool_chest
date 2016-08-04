@@ -1,0 +1,13 @@
+<h2><%= link_to "Tool Index", tools_path %></h2>
+
+<p class="tool_info">
+  <% @tools.each do |tool| %>
+    <%= link_to tool.name.capitalize, tool_path(tool) %>
+    <br>
+    <%= "Quantity: #{tool.quantity} - Price: $#{tool.price}" %>
+    <%= link_to "Edit", edit_tool_path(tool.id) %>
+    <br>
+    <% end %>
+    <br>
+    <%= link_to "Create New Tool", new_tool_path %>
+</p>

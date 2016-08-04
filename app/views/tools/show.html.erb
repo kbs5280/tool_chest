@@ -1,0 +1,10 @@
+<h2> <%= link_to @tool.name.capitalize, tool_path %> </h2>
+
+<p>
+  <%= "Item: #{@tool.name}" %>
+  <%= link_to "Edit", edit_tool_path %>
+  <br>
+  <%= "Price: $#{@tool.price}, Quantity: #{@tool.quantity}" %>
+  <br>
+  <%= link_to "Delete", tool_path(@tool), method: :delete %>
+</p>
